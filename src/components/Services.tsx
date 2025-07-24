@@ -37,18 +37,6 @@ const services = [
     title: "Digital Marketing",
     description: "Data-driven marketing strategies that increase visibility, engagement, and conversions for your business.",
     features: ["SEO Optimization", "PPC Campaigns", "Social Media Marketing", "Email Marketing"]
-  },
-  {
-    icon: Video,
-    title: "Video Production",
-    description: "High-quality video content that captures attention and communicates your message effectively.",
-    features: ["Commercial Videos", "Explainer Videos", "Social Media Content", "Live Streaming"]
-  },
-  {
-    icon: Camera,
-    title: "Photography",
-    description: "Professional photography services that showcase your products and brand in the best light.",
-    features: ["Product Photography", "Brand Photography", "Event Coverage", "Lifestyle Shoots"]
   }
 ];
 
