@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -17,6 +19,9 @@ const Hero = () => {
         />
       </div>
       
+      {/* Background Beams */}
+      <BackgroundBeams className="opacity-60" />
+      
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -30,17 +35,14 @@ const Hero = () => {
           <span className="text-sm text-muted-foreground">🚀 Trusted by 100+ brands worldwide</span>
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Helping brands grow{" "}
-          <span className="bg-gradient-primary bg-clip-text text-transparent">
-            deeply
-          </span>{" "}
-          in the digital space
-        </h1>
+        <TextGenerateEffect 
+          words="Helping brands grow deeply in the digital space"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+        />
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          We're a full-service digital agency specializing in web development, 
-          design, content creation, and digital marketing that drives real results.
+          We're a full-service digital agency based in Greater Noida, Uttar Pradesh, 
+          specializing in web development, design, content creation, and digital marketing that drives real results.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

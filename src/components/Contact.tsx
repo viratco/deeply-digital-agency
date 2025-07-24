@@ -61,10 +61,10 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold">Visit Us</h3>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
-                  </div>
+                   <div>
+                     <h3 className="font-semibold">Visit Us</h3>
+                     <p className="text-muted-foreground">Greater Noida, Uttar Pradesh, India</p>
+                   </div>
                 </div>
               </CardContent>
             </Card>
