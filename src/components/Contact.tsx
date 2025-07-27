@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,8 +7,9 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-secondary/50 to-background">
-      <div className="container mx-auto px-4">
+    <div id="contact" className="relative">
+      <BackgroundBeamsWithCollision className="z-0 from-neutral-950 to-neutral-800">
+        <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
             <span className="text-sm text-primary font-medium">Get In Touch</span>
@@ -35,7 +37,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email Us</h3>
-                    <p className="text-muted-foreground">hello@deeplydigital.com</p>
+                    <p className="text-muted-foreground">viratvaroniya31@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -49,7 +51,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Call Us</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 8595981183</p>
                   </div>
                 </div>
               </CardContent>
@@ -63,7 +65,7 @@ const Contact = () => {
                   </div>
                    <div>
                      <h3 className="font-semibold">Visit Us</h3>
-                     <p className="text-muted-foreground">Greater Noida, Uttar Pradesh, India</p>
+                     <p className="text-muted-foreground">Uttar Pradesh, India</p>
                    </div>
                 </div>
               </CardContent>
@@ -122,9 +124,10 @@ const Contact = () => {
               </CardContent>
             </Card>
           </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </BackgroundBeamsWithCollision>
+    </div>
   );
 };
 

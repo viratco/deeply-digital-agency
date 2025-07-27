@@ -17,24 +17,11 @@ const Footer = () => {
                 Deeply Digital
               </span>
             </div>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-4 font-medium font-playfair">
               Helping brands grow deeply in the digital space through innovative 
               solutions and creative excellence.
             </p>
-            <div className="flex space-x-2">
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Twitter className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Linkedin className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Instagram className="w-4 h-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                <Github className="w-4 h-4" />
-              </Button>
-            </div>
+
           </div>
           
           {/* Services */}
@@ -67,15 +54,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">hello@deeplydigital.com</span>
+                <span className="text-sm">viratvaroniya31@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+91 8595981183</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span className="text-sm">San Francisco, CA</span>
+                <span className="text-sm">Uttar Pradesh, India</span>
               </div>
             </div>
           </div>

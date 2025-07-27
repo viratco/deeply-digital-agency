@@ -1,5 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedCard } from "@/components/ui/animated-card";
+import { MultiStepLoader } from "@/components/ui/multi-step-loader";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { 
   Code, 
   Palette, 
@@ -40,9 +44,26 @@ const services = [
   }
 ];
 
+const loadingStates = [
+  {
+    text: "Creative & Fast Websites",
+  },
+  {
+    text: "SEO-Friendly Code",
+  },
+  {
+    text: "Fully Responsive Design",
+  },
+  {
+    text: "Ongoing Support & Growth",
+  },
+];
+
 const Services = () => {
+  const [loading, setLoading] = useState(false);
+
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-background to-secondary/50">
+    <section id="services" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
@@ -60,34 +81,29 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="bg-gradient-card border-border/50 hover:shadow-card transition-all duration-300 hover:scale-105 group"
-            >
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <Zap className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+              className={`relative bg-neutral-900 border border-neutral-800 rounded-2xl p-6 space-y-3 h-full ${
+                index === 0 || index === 3 ? "lg:col-span-2" : ""
+              }`}>
+
+              <GlowingEffect disabled={false} />
+              <div className="w-10 h-10 border border-neutral-700 rounded-lg flex items-center justify-center mb-4">
+                <service.icon className="w-5 h-5 text-neutral-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+              <p className="text-neutral-400">
+                {service.description}
+              </p>
+            </div>
           ))}
         </div>
+
+
+
+        <MultiStepLoader loadingStates={loadingStates} loading={loading} setLoading={setLoading} duration={1500} />
       </div>
     </section>
   );
